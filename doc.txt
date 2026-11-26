@@ -1,0 +1,54 @@
+DR TUTUL Network - ডিজিটাল ভিজিটিং কার্ড
+=========================================
+
+ফোল্ডার কাঠামো
+---------------
+index.html        মূল পেজ (এই নামটি বদলাবেন না)
+css/style.css     ডিজাইন, রঙ ও লেআউট
+js/main.js        পেমেন্ট বাটন, QR দেখানো, ভাষা পরিবর্তন, শেয়ার, কন্টাক্ট সেভ
+images/           লোগো (logo.jpg), bKash QR (bkash-qr.png), Mukto Pay QR (mukto-qr.png)
+vendor/           তৃতীয় পক্ষের লাইব্রেরির জায়গা (এখন ফাঁকা, কিছু লাগে না)
+.nojekyll         GitHub Pages-এ ফাইল ঠিকমতো লোড হওয়ার জন্য (মুছবেন না)
+
+GitHub Pages-এ লাইভ করার ধাপ
+----------------------------
+1. github.com এ লগইন করে New repository খুলুন (যেমন নাম: drtutulnetwork), Public রাখুন।
+2. "uploading an existing file" এ ক্লিক করুন।
+3. এই ফোল্ডারের ভেতরের সব ফাইল ও ফোল্ডার (index.html, css, js, images, vendor, doc.txt, .nojekyll)
+   টেনে ছেড়ে দিন। জিপ ফাইল সরাসরি আপলোড হয় না, আগে আনজিপ করে নিন।
+4. "Commit changes" চাপুন।
+5. Settings > Pages এ যান। Source এ "Deploy from a branch" বেছে Branch: main, Folder: / (root) দিয়ে Save করুন।
+6. ১-২ মিনিট পর লিংক পাবেন, যেমন: https://আপনার-ইউজারনেম.github.io/drtutulnetwork/
+7. এই লিংক দিয়ে QR কোড বানিয়ে নিন।
+
+তথ্য বদলানোর জায়গা
+-------------------
+ফোন, ইমেইল, ওয়েবসাইট, ঠিকানা, সোশ্যাল লিংক : index.html
+  ফোন:       href="tel:+8809638488627"
+  ইমেইল:     href="mailto:drtutulnetwork@gmail.com"
+  ওয়েবসাইট: href="https://www.drtutulnetwork.com"
+  ফেসবুক:    https://www.facebook.com/drtutulnetwork/
+  WhatsApp:  https://wa.me/8801750544356
+  YouTube:   https://youtube.com/@princehridoytech?si=d4q3dN9fCC-y1nrq
+  Instagram: ট্যাপ করলে @drtutulnetwork কপি হয় (js/main.js এ)
+
+পেমেন্ট নম্বর : index.html এ data-num="..." (bKash, Nagad, Rocket, Upay, Mukto Pay)
+  বর্তমান নম্বর: 01889950731
+
+QR বদলানো : images/bkash-qr.png ও images/mukto-qr.png একই নামে নতুন ছবি দিয়ে বদলান।
+  (শুধু QR অংশ কেটে, চারপাশে সাদা জায়গা রেখে ছবি দিন।)
+
+লোগো বদলানো : images/logo.jpg একই নামে বদলান।
+
+কন্টাক্ট সেভ ও শেয়ার : js/main.js এর শুরুতে NAME, PHONE, EMAIL, URL_ বদলান।
+
+রঙ বদলানো : css/style.css এর শুরুতে :root এর ভেতরের রঙের মান।
+
+ভাষা : উপরে ডানে "বাংলা | EN" বাটনে ভাষা বদলায়। দুই ভাষার লেখা
+  index.html এর data-bn="..." ও data-en="..." এ আছে।
+
+নোট
+---
+- ফন্ট Google Fonts থেকে আসে (ইন্টারনেট লাগে), না এলে ফোনের নিজস্ব ফন্ট ব্যবহার হবে।
+- কার্ড ফোনে ও কম্পিউটারে চলে, ডার্ক মোডও সমর্থিত।
+- আপলোডের পর পেমেন্ট QR অন্য ফোনের অ্যাপ দিয়ে একবার স্ক্যান করে পরীক্ষা করে নিন।
